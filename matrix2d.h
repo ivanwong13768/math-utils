@@ -259,6 +259,11 @@ matrix2d<T> operator* (matrix2d<T> m, T c) {
 }
 
 template <typename T>
+matrix2d<T> operator* (T c, matrix2d<T> m) {
+    return (m * c);
+}
+
+template <typename T>
 void operator*= (matrix2d<T>& m, T c) {
     m = m * c;
     return;
